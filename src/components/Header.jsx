@@ -3,9 +3,16 @@ import { useContext } from 'react';
 import { StateContext } from '.././context/StateProvider'
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
+import { auth } from '../firebase';
 
 function Header() {
-  const [{ basket }] = useContext(StateContext)
+  const [{ basket, user }] = useContext(StateContext)
+
+  const login = () => {
+    if(user) {
+      auth.signOut()
+    }
+  }
 
   return (
     <nav className="header">
@@ -22,10 +29,10 @@ function Header() {
       </div>
 
       <div className="header-nav">
-        <Link to='/login' className='header-link'>
-          <div className="header-option">
-            <span className='header-option-line-one'>Hello Matias!</span>
-            <span className='header-option-line-two'>Sign In</span>
+        <Link to={!user && '/login'} className='header-link'>
+          <div onClick={login} className="header-option">
+            <span className='header-option-line-one'>Hello {user?.email}!</span>
+            <span className='header-option-line-two'>{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
 

@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import { StateContext } from '.././context/StateProvider'
 import CheckoutProduct from './CheckoutProduct'
+import Subtotal from './Subtotal'
 
 function Checkout() {
-    const [{basket}, dispatch] = useContext(StateContext)
+    const [ {basket} ] = useContext(StateContext)
 
   return (
     <div className='checkout'>
+      <div className="checkout-left">
       <img src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" className="checkout-ad" />
       {basket?.length === 0 ? (
         <div>
@@ -19,7 +21,7 @@ function Checkout() {
           {basket?.map(item => {
           return (
             <CheckoutProduct 
-            item={item.id}
+            id={item.id}
             title={item.title}
             image={item.image}
             price={item.price}
@@ -27,6 +29,12 @@ function Checkout() {
             />
           )
           })}
+        </div>
+      )}
+      </div>
+      {basket.length > 0 && (
+        <div className="checkout-right">
+          <Subtotal />
         </div>
       )}
     </div>

@@ -127,16 +127,23 @@ code {
   cursor: pointer;
 }
 .checkout{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display:flex;
+  height: max-content;
+  padding: 10px;
+  background-color: #fff;
 }
 .checkout-ad{
   width: 100%;
   margin-bottom: 10px;
 }
+.checkout-title{
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
 .checkout-product{
   display: flex;
+  margin: 20px 0;
 }
 .checkout-product-image{
   object-fit: contain;
@@ -160,4 +167,90 @@ code {
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
   padding: 5px;
+}
+.checkout-left{
+  /* padding: 20px;
+  background-color: white;
+  height: max-content; */
+}
+.subtotal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.subtotal-gift{
+  display: flex;
+  align-items: center;
+}
+.subtotal-gift > input{
+  margin-right: 5px;
+}
+.subtotal > button{
+  background-color: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border:1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+
+.login{
+  background-color:#fff;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  flex-direction: column; 
+  padding-top:30px;
+}
+.login-container{
+  width: 300px;
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top:30px;
+  border:1px solid lightgray;
+}
+.login-container > h1{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.login__container form h5{
+  margin-bottom: 5px;
+}
+.login-container input{
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  width:98%;
+}
+.login-container p{
+  font-size: 12px;
+  margin-top: 15px;
+}
+.login-logo{
+  width:100px;
+  object-fit: contain;
+  margin:0 20px;
+}
+.login-signin-button,.login-register-button{
+  background: #f0c14b;
+  border:1px solid;
+  margin-top: 10px;
+  border-color:#a88734 #9c7e31 #846a29;
+  color:#111;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+}
+.login-register-button{
+  border-color: darkgray;
+  background-color: rgb(239, 239, 239);
 }

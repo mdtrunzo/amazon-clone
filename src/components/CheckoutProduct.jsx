@@ -1,6 +1,14 @@
+import { useContext } from 'react'
+import { StateContext } from '.././context/StateProvider'
+
 function CheckoutProduct({id, title, image, price, rating}) {
+    const [{basket}, dispatch ] = useContext(StateContext)
+
     const removeFromBasket = () => {
-        console.log('ok')
+        dispatch({
+            type: 'REMOVE_FROM_BASKET',
+            id: id
+        })
     }
   return (
     <div className="checkout-product">
