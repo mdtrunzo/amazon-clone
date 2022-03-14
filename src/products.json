@@ -1,0 +1,39 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Funko Pop Back To The Future",
+            "price": 9.99,
+            "rating": 5,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_723955-MLA44250790198_122020-O.jpg"
+         },
+         {
+            "id": 2,
+            "name": "Funko Pop Back To The Future",
+            "price": 9.99,
+            "rating": 5,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_723955-MLA44250790198_122020-O.jpg"
+         },
+         {
+            "id": 3,
+            "name": "Funko Pop Back To The Future",
+            "price": 9.99,
+            "rating": 5,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_723955-MLA44250790198_122020-O.jpg"
+         },
+         {
+            "id": 4,
+            "name": "Funko Pop Back To The Future",
+            "price": 9.99,
+            "rating": 5,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_723955-MLA44250790198_122020-O.jpg"
+         },
+         {
+            "id": 5,
+            "name": "Funko Pop Back To The Future",
+            "price": 9.99,
+            "rating": 5,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_723955-MLA44250790198_122020-O.jpg"
+         }
+    ]
+}
